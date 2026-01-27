@@ -1,0 +1,10 @@
+pymongo
+ollama
+langchain
+langchain_pinecone
+langchain_ollama
+dotenv
+langchain_google_genai
+langchain-qdrant
+google-api-core
+
