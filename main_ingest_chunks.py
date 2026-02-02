@@ -16,3 +16,23 @@ if __name__ == "__main__":
 
     print(f"✅ Successfully ingested {count} document chunks into Qdrant")
 
+
+import re
+from langchain_core.documents import Document
+
+def tokenize(text: str):
+    return re.findall(r"\w+", text.lower())
+
+
+def tokenize_documents(documents: list[Document]):
+    tokenized_docs = []
+
+    for doc in documents:
+        tokens = tokenize(doc.page_content)
+        tokenized_docs.append({
+            "tokens": tokens,
+            "metadata": doc.metadata
+        })
+
+    return tokenized_docs
+

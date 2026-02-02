@@ -32,7 +32,7 @@ def ingest_chunks_to_qdrant(
                         "mongo_id": str(doc["_id"]),
                         "page": doc.get("page"),
                         "chunk_index": doc.get("chunk_index"),
-                        "company_id": str(doc.get("company_id")),
+                        # "company_id": str(doc.get("company_id")),
                     }
                 )
             )

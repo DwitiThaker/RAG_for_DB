@@ -7,4 +7,7 @@ dotenv
 langchain_google_genai
 langchain-qdrant
 google-api-core
+rank-bm25
+nltk
+
 
